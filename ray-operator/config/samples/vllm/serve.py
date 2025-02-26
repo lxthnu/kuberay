@@ -132,4 +132,4 @@ def build_app(cli_args: Dict[str, str]) -> serve.Application:
 
 #ValueError: The model's max seq len (131072) is larger than the maximum number of tokens that can be stored in KV cache (69568). Try increasing `gpu_memory_utilization` or decreasing `max_model_len` when initializing the engine.
 model = build_app(
-    {"model": os.environ['MODEL_ID'], "tensor-parallel-size": os.environ['TENSOR_PARALLELISM'],"max_model_len"=os.environ['MAX_MODEL_LEN'], "pipeline-parallel-size": os.environ['PIPELINE_PARALLELISM'],"dtype": os.environ['DTYPE']})
+    {"model": os.environ['MODEL_ID'], "tensor-parallel-size": os.environ['TENSOR_PARALLELISM'],"max_model_len": os.environ['MAX_MODEL_LEN'], "pipeline-parallel-size": os.environ['PIPELINE_PARALLELISM'],"dtype": os.environ['DTYPE']})
